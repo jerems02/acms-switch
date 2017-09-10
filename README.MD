@@ -1,9 +1,13 @@
-# ACMS Switch
+# ACMS Switch 0.2
 
 ## Description
 
 It's a component <acms-switch></acms-switch> that display a switch element in your view.
 An event is sent when you switch on/off.
+
+## Installation 
+
+npm install git+https://github.com/jerems02/acms-switch.git --save
 
 ## Importation
 
@@ -35,12 +39,13 @@ export class AppModule { }
 and in your component:
 
 ```typescript
-<acms-switch [id]="123" (switchEvent)="example($event)"></acms-switch>
+<acms-switch [id]="123" [state]="false" (switchEvent)="example($event)"></acms-switch>
 ```
 
 ## Input
 
 id : You have an id (input property) which will be resent when an event is fired.
+state : State we want the switch is (true = on, false = off)
 
 ## Output
 
@@ -55,4 +60,4 @@ switchEvent: this event will sent an object with this format :
 
 ## License
 
-© [jerems02](mailto:jeremie.stezycki@sylpheo.com)
+© ACMS - [jerems02](mailto:jeremie.stezycki@sylpheo.com)

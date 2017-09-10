@@ -6,8 +6,16 @@
 
 var AcmsSwitchComponent = (function () {
     function AcmsSwitchComponent() {
+        this.state = false;
         this.switchEvent = new _angular_core.EventEmitter();
     }
+    /**
+     * @param {?} changes
+     * @return {?}
+     */
+    AcmsSwitchComponent.prototype.ngOnChanges = function (changes) {
+        this.acmsSwitch.nativeElement.checked = this.state;
+    };
     /**
      * @param {?} evt
      * @return {?}
@@ -20,7 +28,7 @@ var AcmsSwitchComponent = (function () {
 AcmsSwitchComponent.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'acms-switch',
-                template: "<label class=\"switch\"> <input type=\"checkbox\" (click)=\"change($event)\"> <span class=\"slider\"></span> </label> ",
+                template: "<label class=\"switch\"> <input type=\"checkbox\" (click)=\"change($event)\" #acmsSwitch> <span class=\"slider\"></span> </label> ",
                 styles: [".switch { position: relative; display: inline-block; width: 35px; height: 20px; } .switch input {display:none;} .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; -webkit-transition: .4s; transition: .4s; border-radius: 34px; border: solid #B5B5B5 1px; } .slider:before { position: absolute; content: \"\"; height: 15px; width: 15px; left: 2px; top: 1px; background-color: white; -webkit-transition: .4s; transition: .3s; border-radius: 50%; border: none; /*border: solid #B5B5B5 2px;*/ } input:checked + .slider { background-color: #FDA137; } input:focus + .slider { box-shadow: 0 0 1px #FDA137; } input:checked + .slider:before { -webkit-transform: translateX(14px); -ms-transform: translateX(14px); transform: translateX(14px); } "]
             },] },
 ];
@@ -29,8 +37,10 @@ AcmsSwitchComponent.decorators = [
  */
 AcmsSwitchComponent.ctorParameters = function () { return []; };
 AcmsSwitchComponent.propDecorators = {
+    'state': [{ type: _angular_core.Input },],
     'id': [{ type: _angular_core.Input },],
     'switchEvent': [{ type: _angular_core.Output },],
+    'acmsSwitch': [{ type: _angular_core.ViewChild, args: ['acmsSwitch',] },],
 };
 
 var AcmsSwitchModule = (function () {

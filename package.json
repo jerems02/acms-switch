@@ -1,6 +1,10 @@
 {
   "name": "acms-switch",
-  "version": "1.0.0",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerems02/acms-switch"
+  },
   "author": {
     "name": "jerems02",
     "email": "jeremie.stezycki@sylpheo.com"
@@ -8,7 +12,10 @@
   "keywords": [
     "angular"
   ],
-  "license": "all rights reserved",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jerems02/acms-switch/issues"
+  },
   "main": "acms-switch.umd.js",
   "module": "acms-switch.js",
   "jsnext:main": "acms-switch.js",
