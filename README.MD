@@ -44,12 +44,12 @@ and in your component:
 
 ## Input
 
-id : You have an id (input property) which will be resent when an event is fired.
-state : State we want the switch is (true = on, false = off)
+*id : You have an id (input property) which will be resent when an event is fired.
+*state : State we want the switch is (true = on, false = off)
 
 ## Output
 
-switchEvent: this event will sent an object with this format :
+*switchEvent: this event will sent an object with this format :
 
 ```javascript
 {
